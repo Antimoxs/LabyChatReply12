@@ -1,53 +1,29 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+# LabyChatReply for LabyMod 1.12.2 [v1.3] [![Gradle build](https://github.com/Antimoxs/LabyChatReply12/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/Antimoxs/LabyChatReply12/actions/workflows/release.yml)
+by Antimoxs
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+Reply to the LabyMod Chat ingame with LabyChatReply by Antimoxs. For more information join our discord: https://discord.gg/ATdbUS4
 
-Source pack installation information:
+## Commands:
 
-Standalone source installation
-==============================
+> /lmc __user__ _message_<p>_Sends a LabyMod message to the selected user of your friendlist._</p>
+> /lmr _message_</b><p>_Sends a message to last user names in /lmc_</p>
 
-See the Forge Documentation online for more detailed instructions:
-http://mcforge.readthedocs.io/en/latest/gettingstarted/
+The syntax for both commands can now be changed in the addons settings.
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+### New in 1.3
+You can now put UUIDs instead of names in the custom command input field to prevent the syntax from working when
+your friends change their name.
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: "gradlew genEclipseRuns" (./gradlew genEclipseRuns if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run "gradlew eclipse" to generate the project.
-(Current Issue)
-4. Open Project > Run/Debug Settings > Edit runClient and runServer > Environment
-5. Edit MOD_CLASSES to show [modid]%%[Path]; 2 times rather then the generated 4.
+> df66f7ab-d5eb-4d25-8d95-0d65bec4caee anti;LabyStudio laby boi;
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: "gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+(Ingame commands will stay the same)
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can run "gradlew --refresh-dependencies" to refresh the local cache. "gradlew clean" to reset everything {this does not affect your code} and then start the processs again.
+### New in 1.2
+You are now able to make custom commands for friends within the ingame settings. You can see the syntax on this example:
 
-Should it still not work, 
-Refer to #ForgeGradle on EsperNet for more information about the gradle environment.
-or the Forge Project Discord discord.gg/UvedJ9m
+> Antimoxs anti;LabyStudio laby boi;
 
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
-
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
-
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+Ingame commands matching the syntax:
+> /anti _message_<p>
+> /laby boi _message_
+  

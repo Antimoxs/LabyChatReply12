@@ -28,4 +28,3 @@ jobs:
       with:
         name: Artifacts
         path: build/libs/
-          echo test, and deploy your project.
